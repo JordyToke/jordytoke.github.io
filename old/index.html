@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-au">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" >
+    <title>Jordy Toke</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Galdeano&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Macondo&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300|PT+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" title="main" href="./css/style.css">
+    <!-- jQuery from google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- turnJS -->
+    <script src="./turnjs4/lib/turn.min.js"></script>
+    <script src="./turnjs4/lib/scissor.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Jordy Toke</h1>
+        <p>Welcome to my website!</p>
+      </hgroup>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Utilities</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <main id="blog">
+      <section>
+        <article>
+          <h2>Post #01</h2>
+          <p>This is my first post so my page isn't completely empty. My intention is to build this site into a webfolio/blog for myself, by combining content that spans my diverse interests I hope to keep myself motivated. On that note I will introduce myself, I'm Jordy a 31 year old Australian, I've been scaffolding the last 8 years including while I studied my bachelors of Design. While persuing my studies at <abbr title="University of New South Wales">UNSW</abbr> I realised my passion lay in development while taking elective <abbr title="Computer Science">CompSci</abbr> courses.</p>
+          <p>Since graduating at the end of <time datetime="2022">2022</time> I halfheartedly continued learning in my spare time. I agreed to remain scaffolding for the next 6 months in exchange for some work perks as we were very short-staffed. Since then I've been applying to junior and graduate dev roles hoping to finally transition from construction. That brings me to now, after growing frustrated at my slow progress and lack of much to show I decided to create this webfolio, as a standalone project and a blog dump for my other various interests.</p>
+          <p>I'm listing a bunch of my vague intentions for the site below that I may refer back to later when the ispiration or motivation strikes me -</p>
+          <ul>
+            <li>Interactive Map for a <abbr title="Dungeons and Dragons">D&amp;D</abbr> campaign I'm producing (started)</li>
+            <li>Adding a tools/utilities page to the site for webapps I create.</li>
+            <li>Web-based sourcebook/wiki for the <abbr title="Dungeons and Dragons">D&amp;D</abbr> campaign setting</li>
+            <li>Purchase a domain for my site.</li>
+            <li>Find a cheap web-hosting provider with backend capability.</li>
+            <li>Update and add scaffold generator app to my site (I created for a uni project).</li>
+            <li>Maintain semi-regular posts (at least one per month would be great).</li>
+            <li>Update the site styling 😂 this will likely be dicked with for some time (Bare with me!).</li>
+            <li>Theres a good likelihood I'll be transitioning the site to React at some stage too.</li>
+          </ul>
+          <p>...</p>
+          <time class="timestamp" datetime="2024-06-09T21:35">09/06/2024 9:35PM</time>
+        </article>
+      </section>
+      <section>
+        <article>
+          <hgroup>
+            <h2>CSS styling effects</h2>
+            Lines, margins, grids, and holes...
+          </hgroup>
+          <p>I wanted to make some styled elements for writing on based off real-world examples. I wanted to try emulate some types of paper found in text-books and journals such as; ruled, grid, margin, perforated, hole-punched etc. I will showcase some of the styles below.</p>
+
+          <div class="a4paper ruled margin">
+            <p class="biro">This section for instance is a combination of a few styles, I wanted it to look like a ruled textbook page with a red margin<br>I created the lined paper effect using the <abbr title="Cascading Style Sheets">CSS</abbr> <a title="CSS repeating linear gradient" href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/repeating-linear-gradient" target="_blank" rel="noopener">repeating-linear-gradient()</a> function. By using 'em' units (derived from the parent elements font size) the lines should always adjust to fit the font-size. It's worth noting that differrent font familie's sizing varies, so some may sit closer to the ruled lines than others, but this can always be offset by adjusting the &lt;padding-top&gt; attribute.</p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <article>
+          <hgroup>
+            <h2>Migrating the portfolio!</h2>
+          </hgroup>
+          <p>As I'd like to be able to be able to easily expand and include future content in my portfolio I have decided to migrate it to React. I think routing will be useful to break my site down into components and will be helpful in maintaining my site into the future.</p>
+          <time class="timestamp" datetime="2024-07-20T08:59">20/07/2024 8:59AM</time>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <small>Contact the author: <address><a href="mailto:jordyn.toke@gmail.com">📧 jordyn.toke@gmail.com</a><br/>
+      <a href="tel:+61434984366">📞 +614 3498 4366</a></address></small>
+    </footer>
+  </body>
+</html>

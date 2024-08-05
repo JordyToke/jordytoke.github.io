@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-au">
   <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" >
     <title>Jordy Toke</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Galdeano&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Galdeano&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Macondo&family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300|PT+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" title="main" href="./style.css">
+    <link rel="stylesheet" type="text/css" title="main" href="./css/style.css">
+    <!-- jQuery from google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- turnJS -->
+    <script src="./turnjs4/lib/turn.min.js"></script>
+    <script src="./turnjs4/lib/scissor.min.js"></script>
   </head>
   <body>
     <header>
@@ -42,9 +47,31 @@
             <li>Maintain semi-regular posts (at least one per month would be great).</li>
             <li>Update the site styling 😂 this will likely be dicked with for some time (Bare with me!).</li>
             <li>Theres a good likelihood I'll be transitioning the site to React at some stage too.</li>
-            ...
           </ul>
+          <p>...</p>
           <time class="timestamp" datetime="2024-06-09T21:35">09/06/2024 9:35PM</time>
+        </article>
+      </section>
+      <section>
+        <article>
+          <hgroup>
+            <h2>CSS styling effects</h2>
+            Lines, margins, grids, and holes...
+          </hgroup>
+          <p>I wanted to make some styled elements for writing on based off real-world examples. I wanted to try emulate some types of paper found in text-books and journals such as; ruled, grid, margin, perforated, hole-punched etc. I will showcase some of the styles below.</p>
+
+          <div class="a4paper ruled margin">
+            <p class="biro">This section for instance is a combination of a few styles, I wanted it to look like a ruled textbook page with a red margin<br>I created the lined paper effect using the <abbr title="Cascading Style Sheets">CSS</abbr> <a title="CSS repeating linear gradient" href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/repeating-linear-gradient" target="_blank" rel="noopener">repeating-linear-gradient()</a> function. By using 'em' units (derived from the parent elements font size) the lines should always adjust to fit the font-size. It's worth noting that differrent font familie's sizing varies, so some may sit closer to the ruled lines than others, but this can always be offset by adjusting the &lt;padding-top&gt; attribute.</p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <article>
+          <hgroup>
+            <h2>Migrating the portfolio!</h2>
+          </hgroup>
+          <p>As I'd like to be able to be able to easily expand and include future content in my portfolio I have decided to migrate it to NextJs. I think routing and the way Nextjs and react break down pages will be helpful in maintaining my site into the future.</p>
+          <time class="timestamp" datetime="2024-07-20T08:59">20/07/2024 8:59AM</time>
         </article>
       </section>
     </main>

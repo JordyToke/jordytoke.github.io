@@ -14,6 +14,7 @@ export default function Contact() {
     <div id="contact">
       <div>
         <img
+          title="profile picture"
           key={contact.avatar}
           src={
             contact.avatar ||

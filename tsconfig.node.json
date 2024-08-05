@@ -7,7 +7,11 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+
+    // custom configurations
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true
   },
   "include": ["vite.config.ts"]
 }

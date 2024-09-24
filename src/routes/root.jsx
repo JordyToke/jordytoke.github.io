@@ -31,7 +31,7 @@ export default function Root() {
             <Link to="about/vite+react">About</Link>
           </li>
           <li>
-            <Link to="utilities/contacts/:contactId">Contacts</Link>
+            <Link to="/contacts/:contactId">Contacts</Link>
           </li>
           <li className="hidden">
             <form id="search-form" role="search">
@@ -50,6 +50,7 @@ export default function Root() {
         </ul>
       </nav>
       <main id="detail">
+        {/* Outlet is where children of this root page will be loaded */}
         <Outlet />
       </main>
     </>

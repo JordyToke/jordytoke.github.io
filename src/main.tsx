@@ -13,10 +13,12 @@ import {
 // create our react router
 const router = createBrowserRouter([
   {
+    // create our router root-page
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
+    // create children of the root page
     children: [
       {
         path: "about/vite+react",
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
       //   element: <Utilities />,
       // },
       {
-        path: "utilities/contacts/:contactId",
+        path: "/contacts/:contactId",
         element: <Contact />,
       },
     ],

@@ -2,20 +2,24 @@ import localforage from "localforage";
 import { matchSorter } from "match-sorter";
 import sortBy from "sort-by";
 
-export async function getPosts(query: string) {
+export async function getPosts(query) {
   await fakeNetwork(`getPosts:${query}`);
-  interface User {
-    userId: number;
-    profilePic: ImageData;
-    Name: string;
-    email: string;
+  class User {
+    constructor(id, profilePic, username, email) {
+      this.id = id;
+      this.profilePic = profilePic;
+      this.username = username;
+      this.email = email;
+    }
   }
-  interface Post {
-    id: number;
-    title: string;
-    author: User;
-    content: string;
-    date: Date;
+  class Post {
+    constructor(id, title, author, content, date) {
+      this.id = id;
+      this.title = title;
+      this.author = author;
+      this.content = content;
+      this.date = date;
+    }
   }
   let posts = await localforage.getItem("posts");
   if (!posts) posts = [];

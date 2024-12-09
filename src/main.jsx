@@ -1,23 +1,21 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import './index.css';
-import App from './App.jsx';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router";
+import { HelmetProvider } from "react-helmet-async";
+import SEO from "./SEO.jsx";
+import "./index.css";
+import App from "./App.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const helmetContext = {};
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <App>
-          <Helmet prioritizeSeoTags>
-            <title>Jorbys World</title>
-            <meta property="og:title" content="Jorbys World" />
-            <meta property="og:description" content="Jordy Toke's Portfolio Website" />
-            <meta property="og:locale" content="en_AU" />
-          </Helmet>
+          <SEO title="Jorbys World" description="Jordy Toke's Portfolio Website" locale="en_AU" />
         </App>
       </HelmetProvider>
     </BrowserRouter>
-  </StrictMode>,
-)
+  </StrictMode>
+);

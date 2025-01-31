@@ -5,10 +5,10 @@ import { HelmetProvider } from "react-helmet-async";
 import SEO from "./SEO.jsx";
 import "./index.css";
 import App from "./App.jsx";
-import Home from "./Home.jsx";
-import Projects from "./Projects.jsx";
-import About from "./About.jsx";
-import Contact from "./Contact.jsx";
+import Home from "./pages/Home.jsx";
+import Projects from "./pages/Projects.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const helmetContext = {};
 

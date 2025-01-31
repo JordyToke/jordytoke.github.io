@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.8);
   background-color: #242424;
 
   font-synthesis: none;
@@ -14,8 +14,7 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  color: rgb(100, 108, 255, 0.8);
   text-decoration: inherit;
 }
 a:hover {
@@ -25,7 +24,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

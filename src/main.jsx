@@ -6,6 +6,7 @@ import SEO from "./SEO.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import Home from "./Home.jsx";
+import Projects from "./Projects.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 
@@ -22,8 +23,9 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="Projects" element={<Projects />} />
+        <Route path="About" element={<About />} />
+        <Route path="Contact" element={<Contact />} />
       </Route> 
     </Routes>
     </BrowserRouter>

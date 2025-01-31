@@ -5,19 +5,17 @@ import { Helmet } from "react-helmet-async";
 export default function SEO({ title, author, description, mimeType, determiner, locale, site_name, image, video, audio, url }) {
   return (
     <Helmet prioritizeSeoTags>
-      {/* Standard Metadata */}
-      <title>{title}</title>
+      <title>{title ? title : "Untitled"}</title>  
       <meta name="description" content={description} />
-      <meta name="author" content={author} />
       <link rel="icon" href={image} type="image/x-icon" />
+      <meta name="author" content={author} />
       <base href={url} />
-      {/* End Standard Metadata */}
       {/* Facebook Open Graph Tags -> https://ogp.me/ */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:locale" content={locale} />
       <meta property="og:type" content={mimeType} />
-      <meta property="og:title" content={title} />
       <meta property="og:determiner" content={determiner} />
-      <meta property="og:description" content={description} />
       <meta property="og:site_name" content={site_name} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />

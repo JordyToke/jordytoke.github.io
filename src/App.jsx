@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>My React Webfolio</h1>
+        <h1>Jordy Toke</h1>
         <NavBar />
       </header>
       <main>

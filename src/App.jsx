@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { Outlet } from 'react-router';
-import './App.css';
-import NavBar from './components/NavBar.jsx';
-
+import { useState, useEffect } from "react";
+import { Outlet } from "react-router";
+import "./App.css";
+import NavBar from "./components/NavBar.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -16,9 +15,13 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <footer></footer>
+      <footer>
+        <small>
+          <span>&copy; Jordy Toke 2025</span>
+        </small>
+      </footer>
     </>
-  )
-};
+  );
+}
 
 export default App;

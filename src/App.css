@@ -16,3 +16,9 @@ footer {
 .active {
   font-weight: 600;
 }
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}

@@ -36,7 +36,7 @@
 }
 
 a {
-  color: rgb(100, 108, 255, 0.8);
+  color: rgba(100, 108, 255, 0.8);
   text-decoration: inherit;
 }
 a:hover {

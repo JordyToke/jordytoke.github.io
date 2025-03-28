@@ -1,7 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router";
 
 export default function Projects() {
   return (
-    <p>Projects</p>
+    <>
+      <p>Projects</p>
+      <Outlet />
+    </>
   )
 }

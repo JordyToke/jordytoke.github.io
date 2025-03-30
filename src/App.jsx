@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router";
-import "./App.css";
-import NavBar from "./components/NavBar.jsx";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -9,18 +9,11 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Jordy Toke</h1>
-        <NavBar />
-      </header>
+      <Header />
       <main>
         <Outlet />
       </main>
-      <footer>
-        <small>
-          <span>&copy; Jordy Toke 2025</span>
-        </small>
-      </footer>
+      <Footer />
     </>
   );
 }

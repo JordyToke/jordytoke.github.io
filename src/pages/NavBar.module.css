@@ -1,0 +1,13 @@
+@keyframes fold-down {
+  from {
+    transform: rotatez(90deg);
+  }
+
+  to {
+    transform: rotatez(180deg);
+  }
+}
+
+.link {
+  
+}

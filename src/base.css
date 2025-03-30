@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.5;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eee;
+    --link-color-a: #88e;
+    --link-color-b: #e90;
+    --background-color: #202022;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+}
+
+@keyframes swingIn {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+a {
+  color: var(--link-color-a);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--link-color-b);
+}
+
+
+a:hover {
+  filter: brightness(1.4);
+}
+
+.active {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  transform-origin: top center;
+  animation: swingIn 200ms ease-in 1 normal both;
+}
+
+main {
+  min-height: 100%;
+}

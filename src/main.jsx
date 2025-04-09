@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import Router from "./router/Router";
 import SEO from "./SEO";

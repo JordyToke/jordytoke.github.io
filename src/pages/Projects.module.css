@@ -1,5 +1,8 @@
-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(180px, 30vh);
+.projects {
+  color: pink;
+}
+
+.folder {
+  background-color: var(--manilla-folder);
+  color: #111;
 }

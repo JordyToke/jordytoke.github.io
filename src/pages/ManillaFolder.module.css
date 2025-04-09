@@ -1,0 +1,17 @@
+.manillaFolder {
+  --manilla-folder: #FEF1DC;
+  color: #111;
+}
+
+.tabs {
+  display: grid;
+  text-align: center;
+  background-color: var(--manilla-folder);
+  border-radius: 0.4rem 0.4rem 0 0;
+  box-shadow: inset var(--background-color) 0 -1rem 1rem -1rem ;
+  height: 2rem;
+}
+
+.folder {
+  background-color: var(--manilla-folder);
+}

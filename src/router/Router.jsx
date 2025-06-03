@@ -10,6 +10,8 @@ import Contact from "../pages/Contact.jsx";
 import NoPage from "../pages/NoPage.jsx";
 
 const Router = () => {
+  console.log(import.meta.env.VITE_PUBLIC_URL);
+
   return (
     <BrowserRouter>
     <Routes>

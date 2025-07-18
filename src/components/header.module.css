@@ -1,0 +1,23 @@
+.tablink {
+  display: inline-block;
+  width: 100%;
+  color: var(--link-color-b);
+  text-decoration: none;
+}
+
+.tablink:hover {
+  color: hsl(from var(--link-color-b) h calc(s + 16) calc(l + 16));
+}
+
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  margin-bottom: -0.4rem;
+  box-shadow: var(--accent-color-a) 0 1rem 0.5rem -0.25rem;
+}
+
+.h1 {
+  justify-self: center;
+}

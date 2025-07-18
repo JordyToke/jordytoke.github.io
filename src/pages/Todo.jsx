@@ -1,41 +1,39 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useParams } from "react-router";
 
-export default function Todo() {
+const Todo = () => {
   // state tracks todo lists
-  const [todoLists, setTodoLists] = useState({});
+  const [todoLists, setTodoLists] = useState(JSON.parse(localStorage.getItem("todos")) || []);
 
-  useEffect((() => {
-    const todos = localStorage.getItem("todos");
-    if (todos) {
-      setTodoLists()
-    }
-    // update todoLists from local storage
-    setTodoLists(localStorage.getItem("todos"));
-  }), [todoLists]);
+  // update local storage when todoLists are changed
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todoLists));
+  }, [todoLists]);
 
   // generate list for each Todo ID in local storage
   const Todos = () => {
-    if (todoLists) {
-      // if todo lists exist in local storage
-      // parse as JSON
-      let todos = JSON.parse(todoLists);
-      // map each todo list to a link/button
-      todos = todos.map((todoList, key) => {
-        <NavLink to={key}>{todoList.name}</NavLink>;
+    if (todoLists.length > 0) {
+      /* If todo lists exist in local storage
+      map each todo list to a link/button */
+      const todos = todoLists.map((todoList) => {
+        <NavLink to={todoList.id}>{todoList.name}</NavLink>;
       });
+      console.log(todos);
       return <nav>{todos}</nav>;
     } else {
-      // no todo lists exist in local storage
-      // add option to create new todo list
+      /* If no todo lists exist in local storage
+      add option to create new todo list */
       return (
-        <button type="button" onClick={() => {
-          const newTodo = {
-            id: Date.now()
-          };
-          newTodo.name = window.prompt("What do you want to call your ToDo list: ", "newTodo") ?? "newTodo";
-          localStorage.setItem("todos", JSON.stringify(newTodo));
-        }}>
+        <button
+          type="button"
+          onClick={() => {
+            const newTodo = {
+              id: Date.now(),
+            };
+            newTodo.name = window.prompt("What do you want to call your ToDo list: ", "newTodo");
+            
+            setTodoLists((prevTodos) => [...prevTodos, newTodo]);
+          }}>
           Create new Todo List
         </button>
       );
@@ -48,4 +46,6 @@ export default function Todo() {
       <Todos />
     </>
   );
-}
+};
+
+export default Todo;

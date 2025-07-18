@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
+import styles from "./header.module.css";
 
 const NavBar = () => {
   // lisk of Navigation Links
@@ -14,7 +15,7 @@ const NavBar = () => {
   // Map the navigation links to jsx list and add animation delay to consecutive items
   const navList = links.map((link, index) => 
     <li key={index} style={{animationDelay:`${index * 100}ms` }}>
-      <NavLink to={link.to} viewTransition>{link.title}</NavLink>
+      <NavLink className={styles.tablink} to={link.to} viewTransition>{link.title}</NavLink>
     </li>
   )
 

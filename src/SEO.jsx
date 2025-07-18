@@ -22,6 +22,13 @@ export default function SEO({ title, author, description, mimeType, determiner, 
       <meta property="og:video" content={video} />
       <meta property="og:audio" content={audio} />
       {/* End Facebook Open Graph Tags */}
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="jordytoke.com" />
+      <meta property="twitter:url" content="http://jordytoke.com" />
+      <meta name="twitter:title" content="Vite + React" />
+      <meta name="twitter:description" content="" />
+      <meta name="twitter:image" content="" />
     </Helmet>
   );
 };

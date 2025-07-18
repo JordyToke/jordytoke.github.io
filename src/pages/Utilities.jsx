@@ -1,17 +1,12 @@
 import React from "react";
-import { Outlet, Routes, Route, NavLink } from "react-router";
-import UtilitiesHome from "./UtilitiesHome.jsx";
+import { Outlet, Routes, Route, NavLink, Link } from "react-router";
 import Todo from "./Todo.jsx";
 
 export default function Utilities() {
   return (
     <>
-      <NavLink to="Todo">ToDo</NavLink>
-      <Routes>
-        <Route index element={<UtilitiesHome />} />
-        <Route path="Todo/:todoId" element={<Todo />} />
-      </Routes>
-      <Outlet />
+      <NavLink to="Todo">ToDo App</NavLink>
+      <a target="_self" href="http://jordytoke.com/Decryptor">Decryptor</a>
     </>
   );
 }

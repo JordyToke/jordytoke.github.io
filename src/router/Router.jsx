@@ -12,6 +12,8 @@ import Todo from "../pages/Todo.jsx";
 import TodoDash from "../pages/TodoDash.jsx";
 
 const Router = () => {
+  console.log(import.meta.env.VITE_PUBLIC_URL);
+
   return (
     <BrowserRouter>
       <Routes>
